@@ -24,7 +24,7 @@ public class JImageDisplay extends JComponent {
             }
         }
     }
-
+    //устанавливет пиксели в определенный цвет
     public void  drawPixel (int x, int y, int rgbColor){
         image.setRGB(x,y, rgbColor);
     }

@@ -7,7 +7,7 @@ public class Mandelbrot extends FractalGenerator {
     public void getInitialRange(Rectangle2D.Double range) {
         range.x = -2;
         range.y = -1.5;
-        range.height = 3;
+        range.height = 3;  //определяет область комплексной плоскости для фрактала.
         range.width = 3;
     }
 
@@ -16,7 +16,7 @@ public class Mandelbrot extends FractalGenerator {
         double xn=x;
         double yn=y;
         for (int i=0;i<MAX_ITERATIONS;i++){
-            double nextx = xn*xn-yn*yn+x;
+            double nextx = xn*xn-yn*yn+x;    //реализует итеративную функцию для фрактала Мандельброта
             double nexty = 2*xn*yn+y;
             xn=nextx;
             yn=nexty;

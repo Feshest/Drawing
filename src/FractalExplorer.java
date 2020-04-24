@@ -33,7 +33,7 @@ public class FractalExplorer {
 
         frame.add(image, BorderLayout.CENTER);
         frame.add(button, BorderLayout.SOUTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // инициализирует графический интерфейс Swing:
 
         frame.pack();
         frame.setVisible(true);
@@ -49,7 +49,7 @@ public class FractalExplorer {
                 double xCoord = FractalGenerator.getCoord(range.x, range.x + range.width, size, x);
                 double yCoord = FractalGenerator.getCoord(range.y, range.y + range.width, size, y);
                 double numIters = fcGen.numIterations(xCoord, yCoord);
-                if (numIters == -1) image.drawPixel(x, y, 0);
+                if (numIters == -1) image.drawPixel(x, y, 0); //метод циклически проходит через каждый пиксель в отображении
                 else {
                     float hue = 0.7f + (float) numIters / 200f;
                     int rgbColor = Color.HSBtoRGB(hue, 1f, 1f);
